@@ -8,7 +8,7 @@
 2. 将 `images/can_throw.png` 替换为与游戏界面左下角用户名匹配的图片。
 
 ## 参考视频
-如果对使用过程有疑问，可以观看这个视频：[https://www.bilibili.com/video/BV1feCdYuEgv/](跳转到BiliBili)
+如果对使用过程有疑问，可以观看这个视频：[跳转到BiliBili](https://www.bilibili.com/video/BV1feCdYuEgv/)
 
 ## 备注
 这是一个有趣的小项目，供爱好者玩耍。
