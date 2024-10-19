@@ -1,0 +1,2 @@
+# auto_surrender_hearthstone
+炉石传说自动投降脚本
