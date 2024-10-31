@@ -48,27 +48,39 @@ class ClickAutomationApp:
     def select_images_directory(self):
         """选择要加载的图片目录。"""
         self.images_directory = filedialog.askdirectory()
-        if self.images_directory:
-            messagebox.showinfo("信息", f"选择的图片目录: {self.images_directory}")
+        # if self.images_directory:
+        #     messagebox.showinfo("信息", f"选择的图片目录: {self.images_directory}")
 
     def fetch_instructions(self):
         """从指定 URL 获取说明并显示。"""
-        url = "https://dhwass.pages.dev/"
+        # url = "https://dhwass.pages.dev/api/hearth_stone"
+
         try:
-            response = requests.get(url)
-            response.raise_for_status()
-            instructions = response.text
+            # response = requests.get(url)
+            # response.raise_for_status()
+
+            # 手动指定要显示的文本内容
+            instructions = (
+                "使用指南\n"
+                "1、运行，依次选择需要点击的图片文件夹和投降图片。\n"
+                "2、最好按照顺序命名。\n"
+                "3、请注意，如果识别不了需要自己重新截图。\n\n"
+                "参考视频\n"
+                "https://www.bilibili.com/video/BV1iPSJY1Eev/"
+            )
+
+            # 显示指定的文本
             messagebox.showinfo("说明", instructions)
+
         except requests.RequestException as e:
             messagebox.showerror("错误", f"无法获取说明: {e}")
-
     def select_can_throw_image(self):
         """选择用于投降的条件图片。"""
         self.can_throw_image = filedialog.askopenfilename(title="选择投降条件图片",
                                                           filetypes=[("PNG files", "*.png"), ("JPEG files", "*.jpg")])
         self.can_throw_image = os.path.normpath(self.can_throw_image)
-        if self.can_throw_image:
-            messagebox.showinfo("信息", f"选择的投降条件图片: {self.can_throw_image}")
+        # if self.can_throw_image:
+        #     messagebox.showinfo("信息", f"选择的投降条件图片: {self.can_throw_image}")
 
     def toggle_clicking(self):
         """切换点击状态，开始或停止点击。"""
